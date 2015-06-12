@@ -1,2 +1,4 @@
 # ui-spinkit
-Configurable spinkit deirectives for angular
+
+Configurable spinkit directives for angular.
+

@@ -1,0 +1,29 @@
+{
+  "name": "ui-spinkit",
+  "version": "0.0.1",
+  "authors": [
+    "Josip Mihelko <josip.mihelko@gmail.com>"
+  ],
+  "description": "Configurable SpinKit (https://github.com/tobiasahlin/SpinKit) spinners for AngularJS",
+  "main": ["./build/dist/uiSpinkit.js"],
+  "keywords": [
+    "spinner",
+    "SpinKit",
+    "spinners",
+    "AngularJS",
+    "ngSpinKit"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/AbsolutEgalaber",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "*"
+  }
+}
