@@ -1,21 +1,21 @@
 'use strict'
-angular.module('ui.spinkit').directive 'skPulse', [->
+angular.module('ui.spinkit').directive 'skPulse', ['$uiSpinkitConfig', ($uiSpinkitConfig)->
   restrict: 'AE'
   replace: true
+  scope:
+    size: '@size'
+    color: '@color'
+  link: (scope)->
+    scope.size = scope.size || $uiSpinkitConfig.pulseConfig.size
+    scope.color = scope.color || $uiSpinkitConfig.pulseConfig.color
   template: '''
 <div>
 <style>
-/*
- *  Usage:
- *
- *    <div class="sk-spinner sk-spinner-pulse"></div>
- *
- */
-.sk-spinner-pulse.sk-spinner {
-  width: 40px;
-  height: 40px;
+.sk-spinner-pulse{{::$id}}.sk-spinner{{::$id}} {
+  width: {{::size}}px;
+  height: {{::size}}px;
   margin: 0 auto;
-  background-color: #333;
+  background-color: {{::color}};
   border-radius: 100%;
   -webkit-animation: sk-pulseScaleOut 1s infinite ease-in-out;
           animation: sk-pulseScaleOut 1s infinite ease-in-out; }
@@ -40,7 +40,7 @@ angular.module('ui.spinkit').directive 'skPulse', [->
             transform: scale(1);
     opacity: 0; } }
 </style>
-<div class="sk-spinner sk-spinner-pulse"></div>
+<div class="sk-spinner{{::$id}} sk-spinner-pulse{{::$id}}"></div>
 </div>
 '''
 ]

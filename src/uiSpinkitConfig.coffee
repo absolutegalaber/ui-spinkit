@@ -1,11 +1,39 @@
 'use strict'
 class UiSpinkitConfig
   constructor: ->
-    @defaultConfig =
-      defaultWidth: 60
-      defaultHeight: 60
     @rotatingPlaneConfig =
       size: 30
+      color: '#333'
+    @doubleBounceConfig =
+      size: 40
+      color: '#333'
+    @waveConfig =
+      width: 50
+      height: 30
+      color: '#333'
+    @wanderingCubesConfig =
+      color: '#333'
+    @pulseConfig =
+      size: 40
+      color: '#333'
+    @chasingDotsConfig =
+      size: 40
+      color: '#333'
+    @threeBounceConfig =
+      width: 70
+      height: 18
+      color: '#333'
+    @circleConfig =
+      size: 22
+      color: '#333'
+    @cubeGridConfig =
+      size: 30
+      color: '#333'
+    @wordpressConfig =
+      size: 30
+      color: '#333'
+    @fadingCircleConfig =
+      size: 22
       color: '#333'
 
 angular.module('ui.spinkit').service('$uiSpinkitConfig', UiSpinkitConfig)

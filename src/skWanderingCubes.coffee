@@ -1,27 +1,22 @@
-
 'use strict'
-angular.module('ui.spinkit').directive 'skWanderingCubes', [->
+angular.module('ui.spinkit').directive 'skWanderingCubes', ['$uiSpinkitConfig', ($uiSpinkitConfig)->
   restrict: 'AE'
   replace: true
+  scope:
+    size: '@size'
+    color: '@color'
+  link: (scope)->
+    scope.color = scope.color || $uiSpinkitConfig.wanderingCubesConfig.color
   template: '''
 <div>
 <style>
-/*
- *  Usage:
- *
- *    <div class="sk-spinner sk-spinner-wandering-cubes">
- *      <div class="sk-cube1"></div>
- *      <div class="sk-cube2"></div>
- *    </div>
- *
- */
-.sk-spinner-wandering-cubes.sk-spinner {
+.sk-spinner-wandering-cubes{{::$id}}.sk-spinner{{::$id}} {
   margin: 0 auto;
   width: 32px;
   height: 32px;
   position: relative; }
-.sk-spinner-wandering-cubes .sk-cube1, .sk-spinner-wandering-cubes .sk-cube2 {
-  background-color: #333;
+.sk-spinner-wandering-cubes{{::$id}} .sk-cube1{{::$id}}, .sk-spinner-wandering-cubes{{::$id}} .sk-cube2{{::$id}} {
+  background-color: {{::color}};
   width: 10px;
   height: 10px;
   position: absolute;
@@ -29,7 +24,7 @@ angular.module('ui.spinkit').directive 'skWanderingCubes', [->
   left: 0;
   -webkit-animation: sk-wanderingCubeMove 1.8s infinite ease-in-out;
           animation: sk-wanderingCubeMove 1.8s infinite ease-in-out; }
-.sk-spinner-wandering-cubes .sk-cube2 {
+.sk-spinner-wandering-cubes{{::$id}} .sk-cube2{{::$id}} {
   -webkit-animation-delay: -0.9s;
           animation-delay: -0.9s; }
 
@@ -77,9 +72,9 @@ angular.module('ui.spinkit').directive 'skWanderingCubes', [->
     -webkit-transform: rotate(-360deg);
             transform: rotate(-360deg); } }
 </style>
-<div class="sk-spinner sk-spinner-wandering-cubes">
-  <div class="sk-cube1"></div>
-  <div class="sk-cube2"></div>
+<div class="sk-spinner{{::$id}} sk-spinner-wandering-cubes{{::$id}}">
+  <div class="sk-cube1{{::$id}}"></div>
+  <div class="sk-cube2{{::$id}}"></div>
 </div>
 </div>
 '''

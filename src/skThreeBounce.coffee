@@ -1,28 +1,26 @@
 'use strict'
-angular.module('ui.spinkit').directive 'skThreeBounce', [->
+angular.module('ui.spinkit').directive 'skThreeBounce', ['$uiSpinkitConfig', ($uiSpinkitConfig)->
   restrict: 'AE'
   replace: true
+  scope:
+    width: '@width'
+    height: '@height'
+    color: '@color'
+  link: (scope)->
+    scope.width = scope.width || $uiSpinkitConfig.threeBounceConfig.width
+    scope.height = scope.height || $uiSpinkitConfig.threeBounceConfig.height
+    scope.color = scope.color || $uiSpinkitConfig.threeBounceConfig.color
   template: '''
 <div>
 <style>
-/*
- *  Usage:
- *
- *    <div class="sk-spinner sk-spinner-three-bounce">
- *      <div class="sk-bounce1"></div>
- *      <div class="sk-bounce2"></div>
- *      <div class="sk-bounce3"></div>
- *    </div>
- *
- */
-.sk-spinner-three-bounce.sk-spinner {
+.sk-spinner-three-bounce{{::$id}}.sk-spinner{{::$id}} {
   margin: 0 auto;
-  width: 70px;
+  width: {{::width}}px;
   text-align: center; }
-.sk-spinner-three-bounce div {
-  width: 18px;
-  height: 18px;
-  background-color: #333;
+.sk-spinner-three-bounce{{::$id}} div {
+  width: {{::height}}px;
+  height: {{::height}}px;
+  background-color: {{::color}};
   border-radius: 100%;
   display: inline-block;
   -webkit-animation: sk-threeBounceDelay 1.4s infinite ease-in-out;
@@ -30,10 +28,10 @@ angular.module('ui.spinkit').directive 'skThreeBounce', [->
   /* Prevent first frame from flickering when animation starts */
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both; }
-.sk-spinner-three-bounce .sk-bounce1 {
+.sk-spinner-three-bounce{{::$id}} .sk-bounce1{{::$id}} {
   -webkit-animation-delay: -0.32s;
           animation-delay: -0.32s; }
-.sk-spinner-three-bounce .sk-bounce2 {
+.sk-spinner-three-bounce{{::$id}} .sk-bounce2{{::$id}} {
   -webkit-animation-delay: -0.16s;
           animation-delay: -0.16s; }
 
@@ -56,10 +54,10 @@ angular.module('ui.spinkit').directive 'skThreeBounce', [->
             transform: scale(1); } }
 
 </style>
-<div class="sk-spinner sk-spinner-three-bounce">
-  <div class="sk-bounce1"></div>
-  <div class="sk-bounce2"></div>
-  <div class="sk-bounce3"></div>
+<div class="sk-spinner{{::$id}} sk-spinner-three-bounce{{::$id}}">
+  <div class="sk-bounce1{{::$id}}"></div>
+  <div class="sk-bounce2{{::$id}}"></div>
+  <div class="sk-bounce3{{::$id}}"></div>
 </div>
 </div>
 '''

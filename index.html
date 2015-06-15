@@ -2,31 +2,229 @@
 <html class="no-js">
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Superugly Demo Page</title>
     <meta name="description" content="UiSpinkit Demo Page">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
-<body>
+<body ng-app="uiSpinkitTestApp">
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-<div ng-app="uiSpinkitTestApp">
 
-    <div sk-rotating-plane size="90" color="red"></div>
-    <div sk-wave></div>
-    <div sk-wandering-cubes></div>
-    <div sk-pulse></div>
-    <div sk-chasing-dots></div>
-    <div sk-three-bounce></div>
-    <div sk-circle></div>
-    <div sk-cube-grid></div>
-    <div sk-wordpress></div>
-    <div sk-fading-circle></div>
-
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <accordion>
+                <accordion-group heading="Rotating Plane">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div sk-rotating-plane></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div sk-rotating-plane size="60" color="green"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <pre>&lt;div sk-rotating-plane&gt;&lt;/div&gt;</pre>
+                        </div>
+                        <div class="col-md-6">
+                            <pre>&lt;div sk-rotating-plane size="60" color="green"&gt;&lt;/div&gt;</pre>
+                        </div>
+                    </div>
+                </accordion-group>
+                <accordion-group heading="Double Bounce">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div sk-double-bounce></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div sk-double-bounce size="60" color="red"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <pre>&lt;div sk-double-bounce&gt;&lt;/div&gt;</pre>
+                        </div>
+                        <div class="col-md-6">
+                            <pre>&lt;div sk-double-bounce size="60" color="red"&gt;&lt;/div&gt;</pre>
+                        </div>
+                    </div>
+                </accordion-group>
+                <accordion-group heading="Wave">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div sk-wave></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div sk-wave width="150" height="75" color="red"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <pre>&lt;div sk-wave&gt;&lt;/div&gt;</pre>
+                        </div>
+                        <div class="col-md-6">
+                            <pre>&lt;div sk-wave width="150" height="75" color="red"&gt;&lt;/div&gt;</pre>
+                        </div>
+                    </div>
+                </accordion-group>
+                <accordion-group heading="Wandering Cubes">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div sk-wandering-cubes></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div sk-wandering-cubes color="red"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <pre>&lt;div sk-wandering-cubes&gt;&lt;/div&gt;</pre>
+                        </div>
+                        <div class="col-md-6">
+                            <pre>&lt;div sk-wandering-cubes color="red"&gt;&lt;/div&gt;</pre>
+                        </div>
+                    </div>
+                </accordion-group>
+                <accordion-group heading="Pulse">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div sk-pulse></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div sk-pulse size="120" color="red"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <pre>&lt;div sk-pulse&gt;&lt;/div&gt;</pre>
+                        </div>
+                        <div class="col-md-6">
+                            <pre>&lt;div sk-pulse size="120" color="red"&gt;&lt;/div&gt;</pre>
+                        </div>
+                    </div>
+                </accordion-group>
+                <accordion-group heading="Chasing Dots">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div sk-chasing-dots></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div sk-chasing-dots size="120" color="red"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <pre>&lt;div sk-chasing-dots&gt;&lt;/div&gt;</pre>
+                        </div>
+                        <div class="col-md-6">
+                            <pre>&lt;div sk-chasing-dots size="120" color="red"&gt;&lt;/div&gt;</pre>
+                        </div>
+                    </div>
+                </accordion-group>
+                <accordion-group heading="Three Bounce">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div sk-three-bounce></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div sk-three-bounce width="200" height="40" color="red"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <pre>&lt;div sk-three-bounce&gt;&lt;/div&gt;</pre>
+                        </div>
+                        <div class="col-md-6">
+                            <pre>&lt;div sk-three-bounce width="200" height="40" color="red"&gt;&lt;/div&gt;</pre>
+                        </div>
+                    </div>
+                </accordion-group>
+                <accordion-group heading="Cricle">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div sk-circle></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div sk-circle size="100" color="red"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <pre>&lt;div sk-circle&gt;&lt;/div&gt;</pre>
+                        </div>
+                        <div class="col-md-6">
+                            <pre>&lt;div sk-circle size="100" color="red"&gt;&lt;/div&gt;</pre>
+                        </div>
+                    </div>
+                </accordion-group>
+                <accordion-group heading="Cube Grid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div sk-cube-grid></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div sk-cube-grid size="100" color="red"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <pre>&lt;div sk-cube-grid&gt;&lt;/div&gt;</pre>
+                        </div>
+                        <div class="col-md-6">
+                            <pre>&lt;div sk-cube-grid size="100" color="red"&gt;&lt;/div&gt;</pre>
+                        </div>
+                    </div>
+                </accordion-group>
+                <accordion-group heading="Wordpress">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div sk-wordpress></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div sk-wordpress size="100" color="red"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <pre>&lt;div sk-wordpress&gt;&lt;/div&gt;</pre>
+                        </div>
+                        <div class="col-md-6">
+                            <pre>&lt;div sk-wordpress size="100" color="red"&gt;&lt;/div&gt;</pre>
+                        </div>
+                    </div>
+                </accordion-group>
+                <accordion-group heading="Fading Cirlce">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div sk-fading-circle></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div sk-fading-circle size="60" color="#5B760F"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <pre>&lt;div sk-fading-circle&gt;&lt;/div&gt;</pre>
+                        </div>
+                        <div class="col-md-6">
+                            <pre>%&lt;div sk-fading-circle size="60" color="#5B760F"&gt;&lt;/div&gt;</pre>
+                        </div>
+                    </div>
+                </accordion-group>
+            </accordion>
+        </div>
+    </div>
 </div>
 <script src="bower_components/angular/angular.js"></script>
-<script src="build/dist/uiSpinkit.js"></script>
-<script src="build/test/uiSpinkitTestApp.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="dist/uiSpinkit.js"></script>
+<script src="dist/test/uiSpinkitTestApp.js"></script>
 
 </body>
 </html>

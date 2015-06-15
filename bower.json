@@ -24,6 +24,8 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "*"
+    "angular": "*",
+    "bootstrap": "*",
+    "angular-bootstrap": "*"
   }
 }

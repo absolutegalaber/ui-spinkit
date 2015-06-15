@@ -2,28 +2,34 @@
 angular.module('ui.spinkit').directive 'skChasingDots', ['$uiSpinkitConfig', ($uiSpinkitConfig)->
   restrict: 'AE'
   replace: true
+  scope:
+    size: '@size'
+    color: '@color'
+  link: (scope)->
+    scope.size = scope.size || $uiSpinkitConfig.chasingDotsConfig.size
+    scope.color = scope.color || $uiSpinkitConfig.chasingDotsConfig.color
   template: '''
 <div>
 <style>
-.sk-spinner-chasing-dots.sk-spinner {
+.sk-spinner-chasing-dots{{::$id}}.sk-spinner{{::$id}} {
   margin: 0 auto;
-  width: 40px;
-  height: 40px;
+  width: {{::size}}px;
+  height: {{::size}}px;
   position: relative;
   text-align: center;
   -webkit-animation: sk-chasingDotsRotate 2s infinite linear;
           animation: sk-chasingDotsRotate 2s infinite linear; }
-.sk-spinner-chasing-dots .sk-dot1, .sk-spinner-chasing-dots .sk-dot2 {
+.sk-spinner-chasing-dots{{::$id}} .sk-dot1{{::$id}}, .sk-spinner-chasing-dots{{::$id}} .sk-dot2{{::$id}} {
   width: 60%;
   height: 60%;
   display: inline-block;
   position: absolute;
   top: 0;
-  background-color: #333;
+  background-color: {{::color}};
   border-radius: 100%;
   -webkit-animation: sk-chasingDotsBounce 2s infinite ease-in-out;
           animation: sk-chasingDotsBounce 2s infinite ease-in-out; }
-.sk-spinner-chasing-dots .sk-dot2 {
+.sk-spinner-chasing-dots{{::$id}} .sk-dot2{{::$id}} {
   top: auto;
   bottom: 0px;
   -webkit-animation-delay: -1s;
@@ -57,9 +63,9 @@ angular.module('ui.spinkit').directive 'skChasingDots', ['$uiSpinkitConfig', ($u
     -webkit-transform: scale(1);
             transform: scale(1); } }
 </style>
-<div class="sk-spinner sk-spinner-chasing-dots">
-  <div class="sk-dot1"></div>
-  <div class="sk-dot2"></div>
+<div class="sk-spinner{{::$id}} sk-spinner-chasing-dots{{::$id}}">
+  <div class="sk-dot1{{::$id}}"></div>
+  <div class="sk-dot2{{::$id}}"></div>
 </div>
 </div>
 '''

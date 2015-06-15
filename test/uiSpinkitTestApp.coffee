@@ -1,2 +1,2 @@
 'use strict'
-testApp = angular.module 'uiSpinkitTestApp', ['ui.spinkit']
+angular.module 'uiSpinkitTestApp', ['ui.spinkit', 'ui.bootstrap']

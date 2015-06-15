@@ -1,26 +1,33 @@
 'use strict'
-angular.module('ui.spinkit').directive 'skWordpress', [->
+angular.module('ui.spinkit').directive 'skWordpress', ['$uiSpinkitConfig', ($uiSpinkitConfig)->
   restrict: 'AE'
   replace: true
+  scope:
+    size: '@size'
+    color: '@color'
+  link: (scope)->
+    scope.size = scope.size || $uiSpinkitConfig.wordpressConfig.size
+    scope.innerCircleSize = scope.size / 4
+    scope.color = scope.color || $uiSpinkitConfig.wordpressConfig.color
   template: '''
 <div>
 <style>
-.sk-spinner-wordpress.sk-spinner {
-  background-color: #333;
-  width: 30px;
-  height: 30px;
-  border-radius: 30px;
+.sk-spinner-wordpress{{::$id}}.sk-spinner{{::$id}} {
+  background-color: {{::color}};
+  width: {{::size}}px;
+  height: {{::size}}px;
+  border-radius: {{::size}}px;
   position: relative;
   margin: 0 auto;
   -webkit-animation: sk-innerCircle 1s linear infinite;
           animation: sk-innerCircle 1s linear infinite; }
-.sk-spinner-wordpress .sk-inner-circle {
+.sk-spinner-wordpress{{::$id}} .sk-inner-circle{{::$id}} {
   display: block;
   background-color: #fff;
-  width: 8px;
-  height: 8px;
+  width: {{::innerCircleSize}}px;
+  height: {{::innerCircleSize}}px;
   position: absolute;
-  border-radius: 8px;
+  border-radius: {{::innerCircleSize}}px;
   top: 5px;
   left: 5px; }
 
@@ -42,8 +49,8 @@ angular.module('ui.spinkit').directive 'skWordpress', [->
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg); } }
 </style>
-<div class="sk-spinner sk-spinner-wordpress">
-  <span class="sk-inner-circle"></span>
+<div class="sk-spinner{{::$id}} sk-spinner-wordpress{{::$id}}">
+  <span class="sk-inner-circle{{::$id}}"></span>
   </div>
 </div>
 '''
