@@ -6,8 +6,8 @@ angular.module('ui.spinkit').directive 'skChasingDots', ['$uiSpinkitConfig', ($u
     size: '@size'
     color: '@color'
   link: (scope)->
-    scope.size = scope.size || $uiSpinkitConfig.chasingDotsConfig.size
-    scope.color = scope.color || $uiSpinkitConfig.chasingDotsConfig.color
+    scope.size = scope.size || $uiSpinkitConfig.defaultSize
+    scope.color = scope.color || $uiSpinkitConfig.defaultColor
   template: '''
 <div>
 <style>

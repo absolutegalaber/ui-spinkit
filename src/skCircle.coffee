@@ -6,8 +6,8 @@ angular.module('ui.spinkit').directive 'skCircle', ['$uiSpinkitConfig', ($uiSpin
     size: '@size'
     color: '@color'
   link: (scope)->
-    scope.size = scope.size || $uiSpinkitConfig.circleConfig.size
-    scope.color = scope.color || $uiSpinkitConfig.circleConfig.color
+    scope.size = scope.size || $uiSpinkitConfig.defaultSize
+    scope.color = scope.color || $uiSpinkitConfig.defaultColor
   template: '''
 <div>
 <style>

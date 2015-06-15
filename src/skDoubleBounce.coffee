@@ -6,8 +6,8 @@ angular.module('ui.spinkit').directive 'skDoubleBounce', ['$uiSpinkitConfig', ($
     size: '@size'
     color: '@color'
   link: (scope)->
-    scope.size = scope.size || $uiSpinkitConfig.doubleBounceConfig.size
-    scope.color = scope.color || $uiSpinkitConfig.doubleBounceConfig.color
+    scope.size = scope.size || $uiSpinkitConfig.defaultSize
+    scope.color = scope.color || $uiSpinkitConfig.defaultColor
   template: '''
 <div>
 <style>

@@ -3,26 +3,24 @@ angular.module('ui.spinkit').directive 'skWave', ['$uiSpinkitConfig', ($uiSpinki
   restrict: 'AE'
   replace: true
   scope:
-    width: '@width'
-    height: '@height'
+    size: '@size'
     color: '@color'
   link: (scope)->
-    scope.width = scope.width || $uiSpinkitConfig.waveConfig.width
-    scope.height = scope.height || $uiSpinkitConfig.waveConfig.height
-    scope.color = scope.color || $uiSpinkitConfig.waveConfig.color
+    scope.size = scope.size || $uiSpinkitConfig.defaultSize
+    scope.color = scope.color || $uiSpinkitConfig.defaultColor
   template: '''
 <div>
 <style>
 .sk-spinner-wave{{::$id}}.sk-spinner{{::$id}} {
   margin: 0 auto;
-  width: {{::width}}px;
-  height: {{::height}}px;
+  width: {{::(size*4)}}px;
+  height: {{::size}}px;
   text-align: center;
   font-size: 10px; }
 .sk-spinner-wave{{::$id}} div {
   background-color: {{::color}};
   height: 100%;
-  width: 6px;
+  width: {{::(size / 5)}}px;
   display: inline-block;
   -webkit-animation: sk-waveStretchDelay 1.2s infinite ease-in-out;
           animation: sk-waveStretchDelay 1.2s infinite ease-in-out; }

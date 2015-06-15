@@ -6,8 +6,8 @@ angular.module('ui.spinkit').directive 'skRotatingPlane', ['$uiSpinkitConfig', (
     size: '@size'
     color: '@color'
   link: (scope)->
-    scope.size = scope.size || $uiSpinkitConfig.rotatingPlaneConfig.size
-    scope.color = scope.color || $uiSpinkitConfig.rotatingPlaneConfig.color
+    scope.size = scope.size || $uiSpinkitConfig.defaultSize
+    scope.color = scope.color || $uiSpinkitConfig.defaultColor
   template: '''
 <div>
 <style>

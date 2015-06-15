@@ -6,9 +6,9 @@ angular.module('ui.spinkit').directive 'skWordpress', ['$uiSpinkitConfig', ($uiS
     size: '@size'
     color: '@color'
   link: (scope)->
-    scope.size = scope.size || $uiSpinkitConfig.wordpressConfig.size
+    scope.size = scope.size || $uiSpinkitConfig.defaultSize
     scope.innerCircleSize = scope.size / 4
-    scope.color = scope.color || $uiSpinkitConfig.wordpressConfig.color
+    scope.color = scope.color || $uiSpinkitConfig.defaultColor
   template: '''
 <div>
 <style>

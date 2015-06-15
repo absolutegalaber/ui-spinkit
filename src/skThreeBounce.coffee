@@ -3,23 +3,21 @@ angular.module('ui.spinkit').directive 'skThreeBounce', ['$uiSpinkitConfig', ($u
   restrict: 'AE'
   replace: true
   scope:
-    width: '@width'
-    height: '@height'
+    size: '@size'
     color: '@color'
   link: (scope)->
-    scope.width = scope.width || $uiSpinkitConfig.threeBounceConfig.width
-    scope.height = scope.height || $uiSpinkitConfig.threeBounceConfig.height
-    scope.color = scope.color || $uiSpinkitConfig.threeBounceConfig.color
+    scope.size = scope.size || $uiSpinkitConfig.defaultSize
+    scope.color = scope.color || $uiSpinkitConfig.defaultColor
   template: '''
 <div>
 <style>
 .sk-spinner-three-bounce{{::$id}}.sk-spinner{{::$id}} {
   margin: 0 auto;
-  width: {{::width}}px;
+  width: {{::((size * 3) + 10) }}px;
   text-align: center; }
 .sk-spinner-three-bounce{{::$id}} div {
-  width: {{::height}}px;
-  height: {{::height}}px;
+  width: {{::size}}px;
+  height: {{::size}}px;
   background-color: {{::color}};
   border-radius: 100%;
   display: inline-block;

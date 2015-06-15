@@ -6,8 +6,8 @@ angular.module('ui.spinkit').directive 'skFadingCircle', ['$uiSpinkitConfig', ($
     size: '@size'
     color: '@color'
   link: (scope)->
-    scope.size = scope.size || $uiSpinkitConfig.fadingCircleConfig.size
-    scope.color = scope.color || $uiSpinkitConfig.fadingCircleConfig.color
+    scope.size = scope.size || $uiSpinkitConfig.defaultSize
+    scope.color = scope.color || $uiSpinkitConfig.defaultColor
   template: '''
 <div>
 <style>

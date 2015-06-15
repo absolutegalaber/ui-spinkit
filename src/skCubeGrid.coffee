@@ -6,8 +6,8 @@ angular.module('ui.spinkit').directive 'skCubeGrid', ['$uiSpinkitConfig', ($uiSp
     size: '@size'
     color: '@color'
   link: (scope)->
-    scope.size = scope.size || $uiSpinkitConfig.cubeGridConfig.size
-    scope.color = scope.color || $uiSpinkitConfig.cubeGridConfig.color
+    scope.size = scope.size || $uiSpinkitConfig.defaultSize
+    scope.color = scope.color || $uiSpinkitConfig.defaultColor
   template: '''
 <div>
 <style>

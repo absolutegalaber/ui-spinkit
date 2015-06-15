@@ -6,8 +6,8 @@ angular.module('ui.spinkit').directive 'skPulse', ['$uiSpinkitConfig', ($uiSpink
     size: '@size'
     color: '@color'
   link: (scope)->
-    scope.size = scope.size || $uiSpinkitConfig.pulseConfig.size
-    scope.color = scope.color || $uiSpinkitConfig.pulseConfig.color
+    scope.size = scope.size || $uiSpinkitConfig.defaultSize
+    scope.color = scope.color || $uiSpinkitConfig.defaultColor
   template: '''
 <div>
 <style>

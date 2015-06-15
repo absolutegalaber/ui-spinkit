@@ -6,7 +6,7 @@ angular.module('ui.spinkit').directive 'skWanderingCubes', ['$uiSpinkitConfig', 
     size: '@size'
     color: '@color'
   link: (scope)->
-    scope.color = scope.color || $uiSpinkitConfig.wanderingCubesConfig.color
+    scope.color = scope.color || $uiSpinkitConfig.defaultColor
   template: '''
 <div>
 <style>
