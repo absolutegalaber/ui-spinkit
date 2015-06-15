@@ -48,8 +48,17 @@ Configurable SpinKit (https://github.com/tobiasahlin/SpinKit) spinners for Angul
     <div sk-fading-circle></div>
     <div sk-fading-circle size="60" color="#5B760F"></div>
     ```
+5. Configure Defaults as you require them:
+    Currently there are only to Options:
+    ```javascript
+    myapp = angular.module('myapp', ['ui.spinkit'])
+    myapp.config(['$uiSpinkitConfigProvider',function($uiSpinkitConfigProvider){
+          $uiSpinkitConfigProvider.setDefaultSize(50);
+          $uiSpinkitConfigProvider.setDefaultColor('#000000');
+    })]
+    ``
 
-5. Add all your requests / problems / ideas / bug fixes in the issues area or send us a pull request!
+6. Add all your requests / problems / ideas / bug fixes in the issues area or send us a pull request!
 
 ##Build
 1. Clone it
