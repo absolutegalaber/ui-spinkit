@@ -6,7 +6,7 @@
   ],
   "description": "Configurable SpinKit (https://github.com/tobiasahlin/SpinKit) spinners for AngularJS (1.3+)",
   "main": [
-    "./dist/uiSpinkit.js"
+    "./dist/uiSpinkit.js",
     "./dist/uiSpinkit.min.js"
   ],
   "keywords": [
