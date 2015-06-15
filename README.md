@@ -60,7 +60,7 @@ Configurable SpinKit (https://github.com/tobiasahlin/SpinKit) spinners for Angul
 
 6. Add all your requests / problems / ideas / bug fixes in the issues area or send us a pull request!
 
-##Build
+##Build Locally
 1. Clone it
 
 2. Build it
