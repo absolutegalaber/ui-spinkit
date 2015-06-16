@@ -58,7 +58,7 @@ Inspired by [angular-spinkit](https://github.com/Urigo/angular-spinkit).
           $uiSpinkitConfigProvider.setDefaultSize(50);
           $uiSpinkitConfigProvider.setDefaultColor('#000000');
     })]
-    ``
+    ```
 
 6. Add all your requests / problems / ideas / bug fixes in the issues area or send us a pull request!
 
