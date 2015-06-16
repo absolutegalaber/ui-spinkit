@@ -2,6 +2,7 @@
 ===============
 
 Configurable SpinKit (https://github.com/tobiasahlin/SpinKit) spinners for AngularJS
+Inspired by [angular-spinkit](https://github.com/Urigo/angular-spinkit).
 
 ## Usage
 1. Install with bower:
@@ -48,8 +49,9 @@ Configurable SpinKit (https://github.com/tobiasahlin/SpinKit) spinners for Angul
     <div sk-fading-circle></div>
     <div sk-fading-circle size="60" color="#5B760F"></div>
     ```
+    
 5. Configure Defaults as you require them:
-    Currently there are only to Options:
+    Currently there are only two Options:
     ```javascript
     myapp = angular.module('myapp', ['ui.spinkit'])
     myapp.config(['$uiSpinkitConfigProvider',function($uiSpinkitConfigProvider){
