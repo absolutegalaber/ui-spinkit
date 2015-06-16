@@ -76,7 +76,8 @@ Inspired by [angular-spinkit](https://github.com/Urigo/angular-spinkit).
 Open index.html in a browser 
 
 ## What remains to be done.
-1. Add example to JSFiddle.
-1. Add $uiSpinkitConfigProvider to override defaults.
-2. Add a funky "RandomSpinner".
-3. Add an "ImageLoaderSpinner".
+1. Add some jasmine tests.
+2. Add example to JSFiddle.
+3. ~~Add $uiSpinkitConfigProvider to override defaults.~~
+4. Add a funky "RandomSpinner".
+5. Add an "ImageLoaderSpinner" like angular-spinkit.
