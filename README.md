@@ -4,6 +4,8 @@
 Configurable SpinKit (https://github.com/tobiasahlin/SpinKit) spinners for AngularJS
 Inspired by [angular-spinkit](https://github.com/Urigo/angular-spinkit).
 
+See it in action [here](http://jsbin.com/gazixopere/edit?html,output)
+
 ## Usage
 1. Install with bower:
     ```javascript
