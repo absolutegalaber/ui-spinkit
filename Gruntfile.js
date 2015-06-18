@@ -17,6 +17,7 @@ module.exports = function (grunt) {
                     'dist/build/skCircle.js',
                     'dist/build/skCubeGrid.js',
                     'dist/build/skWordpress.js',
+                    'dist/build/skRandom.js',
                     'dist/build/skFadingCircle.js',
                     'dist/build/uiSpinkitConfig.js'
                 ],

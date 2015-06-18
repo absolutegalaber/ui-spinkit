@@ -81,5 +81,6 @@ Open index.html in a browser
 1. Add some jasmine tests.
 2. Add example to JSFiddle.
 3. ~~Add $uiSpinkitConfigProvider to override defaults.~~
-4. Add a funky "RandomSpinner".
+4. ~~Add a funky "RandomSpinner".~~
 5. Add an "ImageLoaderSpinner" like angular-spinkit.
+6. Add show/hide callback mechanism
