@@ -14,24 +14,27 @@
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<div class="container">
+<div class="container" ng-controller="UiSpinkitTestAppController">
     <div class="row">
         <div class="col-md-12">
             <accordion>
                 <accordion-group heading="Rotating Plane">
                     <div class="row">
-                        <div class="col-md-6">
-                            <div sk-rotating-plane></div>
+                        <div class="col-md-4">
+                            <div sk-rotating-plane ng-if="data.loading"></div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div sk-rotating-plane size="60" color="green"></div>
+                        </div>
+                        <div class="col-md-4 text-right">
+                            <button class="btn btn-primary" ng-click="flip()">Flip Visibility</button>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <pre>&lt;div sk-rotating-plane&gt;&lt;/div&gt;</pre>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <pre>&lt;div sk-rotating-plane size="60" color="green"&gt;&lt;/div&gt;</pre>
                         </div>
                     </div>
@@ -218,23 +221,22 @@
                 </accordion-group>
                 <accordion-group heading="Random Spinner">
                     <div class="row">
-                        <div class="col-md-6">
-                            <div sk-random></div>
+                        <div class="col-md-4">
+                            <div sk-random ng-if="loading"></div>
                         </div>
-                        <div class="col-md-6">
-                            <div sk-random size="120" color="red"></div>
+                        <div class="col-md-4">
+                            <div sk-random size="100" color="red" ng-if="loading"></div>
+                        </div>
+                        <div class="col-md-4 text-right">
+                            <button class="btn btn-primary" ng-click="flip()">Flip Visibility</button>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <pre>&lt;div sk-random&gt;&lt;/div&gt;</pre>
                         </div>
-                        <div class="col-md-6">
-                            <pre>&lt;div sk-random size="120" color="red"&gt;&lt;/div&gt;</pre>
-                        </div>
-                        <div class="col-md-12">
-                            The sk-random renders on the the directives randomly.
-                            The random is generated in the link of the directive
+                        <div class="col-md-4">
+                            <pre>&lt;div sk-random size="100" color="red"&gt;&lt;/div&gt;</pre>
                         </div>
                     </div>
                 </accordion-group>
@@ -247,6 +249,7 @@
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <script src="dist/uiSpinkit.js"></script>
 <script src="dist/test/uiSpinkitTestApp.js"></script>
+<script src="dist/test/uiSpinkitTestAppController.js"></script>
 
 </body>
 </html>

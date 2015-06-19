@@ -250,6 +250,35 @@
 
 (function() {
   'use strict';
+  angular.module('ui.spinkit').directive('skRandom', [
+    '$compile', '$uiSpinkitConfig', function($compile, $uiSpinkitConfig) {
+      var theDirectives;
+      theDirectives = ['sk-rotating-plane', 'sk-double-bounce', 'sk-wave', 'sk-wandering-cubes', 'sk-pulse', 'sk-chasing-dots', 'sk-three-bounce', 'sk-circle', 'sk-cube-grid', 'sk-wordpress', 'sk-fading-circle'];
+      return {
+        replace: true,
+        scope: {
+          size: '@size',
+          color: '@color'
+        },
+        link: function(scope, elem) {
+          var directiveIndex, theDirective, toAdd;
+          directiveIndex = Math.floor(Math.random() * (theDirectives.length - 1) + 1);
+          theDirective = theDirectives[directiveIndex];
+          scope.size = scope.size || $uiSpinkitConfig.defaultSize;
+          scope.color = scope.color || $uiSpinkitConfig.defaultColor;
+          toAdd = $compile("<div " + theDirective + " size='{{::size}}' color='{{::color}}'></div>")(scope);
+          return elem.append(toAdd);
+        }
+      };
+    }
+  ]);
+
+}).call(this);
+
+//# sourceMappingURL=skRandom.js.map
+
+(function() {
+  'use strict';
   angular.module('ui.spinkit').directive('skFadingCircle', [
     '$uiSpinkitConfig', function($uiSpinkitConfig) {
       return {
