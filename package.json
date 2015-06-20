@@ -1,11 +1,16 @@
 {
   "name": "ui-spinkit",
   "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "GIT",
+    "url": "https://github.com/absolutegalaber/ui-spinkit"
+  },
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-contrib-coffee": "^0.13.0",
     "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-jshint": "~0.6.3",
+    "grunt-coffeelint": "~0.0.13",
     "grunt-contrib-nodeunit": "~0.2.0",
     "grunt-contrib-uglify": "~0.2.2",
     "grunt-contrib-clean": "^0.6.0"

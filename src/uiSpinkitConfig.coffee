@@ -5,11 +5,11 @@ angular.module('ui.spinkit').provider '$uiSpinkitConfig', ->
     defaultColor: '#333'
     defaultSize: 40
 
-  setDefaultColor: (newDefaultColor)->
+  setDefaultColor: (newDefaultColor) ->
     config.defaultColor = newDefaultColor
 
-  setDefaultSize: (newDefaultSize)->
+  setDefaultSize: (newDefaultSize) ->
     config.defaultSize = newDefaultSize
 
-  $get: ()->
+  $get: ->
     config

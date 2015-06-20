@@ -1,11 +1,11 @@
 'use strict'
-angular.module('ui.spinkit').directive 'skWanderingCubes', ['$uiSpinkitConfig', ($uiSpinkitConfig)->
+angular.module('ui.spinkit').directive 'skWanderingCubes', ['$uiSpinkitConfig', ($uiSpinkitConfig) ->
   restrict: 'AE'
   replace: true
   scope:
     size: '@size'
     color: '@color'
-  link: (scope)->
+  link: (scope) ->
     scope.color = scope.color || $uiSpinkitConfig.defaultColor
   template: '''
 <div>

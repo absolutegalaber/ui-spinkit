@@ -58,8 +58,15 @@ module.exports = function (grunt) {
                 }]
             }
         },
+        coffeelint: {
+            app: ['src/**coffee'],
+            test: ['test/**coffee'],
+            options: {
+                configFile: 'coffeelint.json'
+            }
+        },
         clean: {
-            files: 'build'
+            files: 'dist'
         }
     });
 
@@ -68,8 +75,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-coffeelint');
 
     // Default task(s).
-    grunt.registerTask('default', ['coffee:dist', 'coffee:test', 'concat:dist', 'uglify']);
+    grunt.registerTask('default', ['coffeelint', 'coffee', 'concat:dist', 'uglify']);
 
 };

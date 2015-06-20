@@ -1,11 +1,11 @@
 'use strict'
-angular.module('ui.spinkit').directive 'skCircle', ['$uiSpinkitConfig', ($uiSpinkitConfig)->
+angular.module('ui.spinkit').directive 'skCircle', ['$uiSpinkitConfig', ($uiSpinkitConfig) ->
   restrict: 'AE'
   replace: true
   scope:
     size: '@size'
     color: '@color'
-  link: (scope)->
+  link: (scope) ->
     scope.size = scope.size || $uiSpinkitConfig.defaultSize
     scope.color = scope.color || $uiSpinkitConfig.defaultColor
   template: '''

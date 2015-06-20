@@ -1,6 +1,6 @@
 'use strict'
 class UiSpinkitTestAppController
-  constructor: (@$scope)->
+  constructor: (@$scope) ->
     @$scope.data =
       loading: true
     @$scope.flip = @flip
