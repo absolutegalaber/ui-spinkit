@@ -24,7 +24,7 @@
                             <div sk-rotating-plane ng-if="data.loading"></div>
                         </div>
                         <div class="col-md-4">
-                            <div sk-rotating-plane size="60" color="green"></div>
+                            <div sk-rotating-plane size="60" color="green" ng-if="data.loading"></div>
                         </div>
                         <div class="col-md-4 text-right">
                             <button class="btn btn-primary" ng-click="flip()">Flip Visibility</button>
@@ -222,10 +222,10 @@
                 <accordion-group heading="Random Spinner">
                     <div class="row">
                         <div class="col-md-4">
-                            <div sk-random ng-if="loading"></div>
+                            <div sk-random ng-if="data.loading"></div>
                         </div>
                         <div class="col-md-4">
-                            <div sk-random size="100" color="red" ng-if="loading"></div>
+                            <div sk-random size="100" color="red" ng-if="data.loading"></div>
                         </div>
                         <div class="col-md-4 text-right">
                             <button class="btn btn-primary" ng-click="flip()">Flip Visibility</button>
